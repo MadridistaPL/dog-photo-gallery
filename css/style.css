@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #f5f6f7;
+  width: 100%;
 }
 
 .header {
@@ -19,23 +20,33 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1390px;
-  padding: 0 4px;
+  max-width: 1400px;
+  margin: 0 auto 20px;
+  justify-content: center;
 }
 
 .column {
   flex: 33%;
   max-width: 33%;
-  padding: 0 4px;
+  padding: 0 10px;
 }
 
 .gallery img {
-  margin-top: 8px;
-  vertical-align: middle;
+  margin-top: 20px;
   width: 100%;
-  /* width: 100%;
-  max-width: 450px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px; */
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
