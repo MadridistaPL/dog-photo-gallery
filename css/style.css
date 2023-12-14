@@ -14,7 +14,7 @@ body {
   text-transform: uppercase;
   padding: 32px;
   background-color: #222;
-  color: #fff;
+  color: yellow;
 }
 
 .gallery {
@@ -31,10 +31,33 @@ body {
   padding: 0 10px;
 }
 
-.gallery img {
+img {
   margin-top: 20px;
   width: 100%;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.gallery:hover img:not(:hover) {
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+.saturate {
+  filter: saturate(7);
+}
+
+.contrast {
+  filter: contrast(180%);
+}
+
+.huerotate {
+  filter: hue-rotate(180deg);
+}
+
+.sepia {
+  filter: sepia(100%);
 }
 
 @media screen and (max-width: 800px) {
